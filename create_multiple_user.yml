@@ -1,0 +1,11 @@
+---
+- name: My playbook
+  hosts: all
+  become: yes
+  tasks:
+    - name: add a lsit of users
+      user: name='{{item}}' state=present
+      with_items:
+        - Raj
+        - Sai
+        - Hari 
